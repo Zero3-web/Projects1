@@ -1,0 +1,69 @@
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 98vw;
+        height: 420px;
+    }
+    .card {
+        width: 140px;
+        height: 200px;
+    }
+    .word {
+        font-size: 1em;
+    }
+    .gender {
+        font-size: 0.95em;
+    }
+    .meaning {
+        font-size: 0.95em;
+    }
+    .example, .translation {
+        font-size: 0.9em;
+    }
+    .controls1 button {
+        width: 24px;
+        height: 24px;
+        font-size: 0.9em;
+        margin: 0 4px;
+    }
+    .controls1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .music-player {
+        width: 98vw;
+        padding: 0px 1vw 0 1vw;
+        min-width: 0;
+        max-width: 100vw;
+        overflow: visible !important;
+        position: static !important;
+        z-index: auto !important;
+    }
+    .music-player .controls {
+        margin-top: -18px !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: static !important;
+        z-index: auto !important;
+    }
+    .music-player .play-pause-btn {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        position: static !important;
+        z-index: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .music-player .play-pause-btn i {
+        font-size: 1.5em !important;
+        display: inline-block !important;
+        position: static !important;
+        z-index: auto !important;
+    }
+    #progress {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}

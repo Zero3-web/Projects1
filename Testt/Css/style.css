@@ -1,0 +1,241 @@
+/* ======== Desktop styles (default) ======== */
+.card-content, body {
+    padding: 20px;
+    display: flex
+}
+
+.example, .gender {
+    font-style: italic
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Tagesschrift, system-ui;
+    background: #f5e8dc;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    position: relative;
+    perspective: 1500px
+}
+
+.card, .card::before, .carousel {
+    position: absolute
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d
+}
+
+.card {
+    width: 280px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    transition: box-shadow .3s;
+    border: 8px solid #5c4033
+}
+
+.card:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,.3)
+}
+
+.card-content {
+    text-align: center;
+    color: #333;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.example img {
+    margin-top: 10px;
+    width: 55%;
+    border-radius: 12px
+}
+
+.word {
+    font-size: 2em;
+    font-weight: 700;
+    color: #b71c1c;
+    margin-bottom: 8px;
+    text-transform: capitalize
+}
+
+.gender {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px
+}
+
+.meaning {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 15px
+}
+
+.example {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 8px
+}
+
+.translation {
+    font-size: 1.1em;
+    color: #666
+}
+
+.card::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,rgba(183,28,28,.1),rgba(225,196,215,.2));
+    z-index: -1;
+    border-radius: 20px
+}
+
+.controls1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;      /* antes 30px */
+    margin-bottom: 20px;  /* agrega separación inferior */
+    z-index: 1;
+    position: relative;
+}
+
+.controls1 button {
+    background: #dc143c;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    transition: background .3s,transform .3s
+}
+
+.controls1 button:hover {
+    background: #8e0000;
+    transform: scale(1.1)
+}
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #5c4033;
+    width: 380px;
+    padding: 0px 30px;
+    border-radius: 20px;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important; /* quita el negativo para que no suba demasiado */
+    z-index: 2;
+    position: relative;
+}
+
+.music-player h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6
+}
+
+.music-player p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: .6
+}
+
+#progress {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgba(163,162,164,.4);
+    border-radius: 4px;
+    margin: 32px 0 24px;
+    cursor: pointer
+}
+
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #5c4033;
+    width: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline: 4px solid var(--primary-clr);
+    box-shadow: 0 6px 10px rgba(5,36,28,.3)
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 20px;
+    background: rgba(163,162,164,.3);
+    color: var(--primary-clr);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.3);
+    outline: 0;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 20px rgba(5,36,28,.3);
+    cursor: pointer;
+    transition: .3s linear
+}
+
+.controls button:is(:hover,:focus-visible) {
+    transform: scale(.96)
+}
+
+.controls button:nth-child(2) {
+    transform: scale(1.3)
+}
+
+.controls button:nth-child(2):is(:hover,:focus-visible) {
+    transform: scale(1.25)
+}
+
+.hidden {
+    display: none
+}
+
+.backward i, .forward i, .play-pause-btn i {
+    color: #5c4033
+}
